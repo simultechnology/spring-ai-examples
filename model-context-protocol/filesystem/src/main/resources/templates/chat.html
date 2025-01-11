@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Chat with AI</title>
+</head>
+<body>
+<h1>Ask a Question</h1>
+<form action="/ask" method="post">
+  <label for="question">Your Question:</label><br>
+  <textarea id="question" name="question" rows="4" cols="50" required></textarea><br><br>
+  <button type="submit">Ask</button>
+</form>
+
+<hr>
+
+<div th:if="${question}">
+  <h2>Your Question:</h2>
+  <p th:text="${question}"></p>
+  <h2>AI's Response:</h2>
+  <p th:text="${response}"></p>
+</div>
+</body>
+</html>

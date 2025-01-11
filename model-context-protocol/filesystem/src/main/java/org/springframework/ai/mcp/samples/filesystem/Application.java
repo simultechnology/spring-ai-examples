@@ -24,6 +24,12 @@ public class Application {
 	}
 
 	@Bean
+	public ChatClient chatClient(ChatClient.Builder chatClientBuilder, List<McpFunctionCallback> functionCallbacks) {
+		return chatClientBuilder
+				.defaultFunctions(functionCallbacks.toArray(new McpFunctionCallback[0]))
+				.build();
+	}
+
 	public CommandLineRunner predefinedQuestions(ChatClient.Builder chatClientBuilder,
 			List<McpFunctionCallback> functionCallbacks, ConfigurableApplicationContext context) {
 
