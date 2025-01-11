@@ -88,7 +88,7 @@ public class Application {
 	}
 
 	private static String getDbPath() {
-		return Paths.get(System.getProperty("user.dir"), "target").toString();
+		return Paths.get("/Users/t_ishikawa/workspace").toString();
 	}
 
 }
