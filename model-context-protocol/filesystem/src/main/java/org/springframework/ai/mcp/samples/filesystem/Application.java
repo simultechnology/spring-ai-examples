@@ -77,7 +77,7 @@ public class Application {
 				.build();
 
 		var mcpClient = McpClient.using(new StdioClientTransport(stdioParams))
-				.requestTimeout(Duration.ofSeconds(10)).sync();
+				.requestTimeout(Duration.ofSeconds(30)).sync();
 
 		var init = mcpClient.initialize();
 
